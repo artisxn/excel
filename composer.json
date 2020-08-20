@@ -1,0 +1,54 @@
+{
+  "name": "codicastudio/excel",
+  "description": "A noobs worthless garbage, just learning.",
+  "keywords": [
+      "worthless garabage by a noob."
+  ],
+  "homepage": "https://github.com/codicastudio/excel",
+  "license": "MIT",
+  "authors": [
+      {
+          "name": "Michael J Brown",
+          "email": "codicastudiodev@gmail.com",
+          "homepage": "https://codicastudio.dev",
+          "role": "Developer"
+      }
+  ],
+  "require": {
+    "ext-json": "*",
+    "php": "^7.0",
+    "phpoffice/phpspreadsheet": "^1.14",
+    "illuminate/support": "^7.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^5.0",
+    "orchestra/database": "^5.0",
+    "predis/predis": "^1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "codicastudio\\Excel\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "codicastudio\\Excel\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+},
+  "extra": {
+    "laravel": {
+      "providers": [
+        "codicastudio\\Excel\\ExcelServiceProvider"
+      ],
+      "aliases": {
+        "Excel": "codicastudio\\Excel\\Facades\\Excel"
+      }
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
